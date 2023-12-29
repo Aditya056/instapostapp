@@ -13,7 +13,7 @@ const uploadImages = require("./ImageUpload");
   
   
 app.use(cors({
-    origin: 'https://aditya056.github.io',
+    origin: ['http://localhost:3000'],
 }));
 
 app.use(express.json());
@@ -112,3 +112,5 @@ app.post('/posttoinsta',upload.single('image'),async(req,res)=>{
 })
 
 
+
+app.listen(3030)
