@@ -19,14 +19,15 @@ app.use(express.json());
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'images/'); // Adjust the path accordingly
+        cb(null, process.env.UPLOAD_DIR || 'uploads/'); // Use environment variable or default path
     },
     filename: function (req, file, cb) {
-      const originalnameSplit = file.originalname.split('.');
-      const fileExtension = originalnameSplit[originalnameSplit.length - 1]; // Get the extension
-      cb(null, 'image1.' + fileExtension); // Save as 'image1' with the original extension
+        const originalnameSplit = file.originalname.split('.');
+        const fileExtension = originalnameSplit[originalnameSplit.length - 1];
+        cb(null, 'image1.' + fileExtension);
     },
-  });
+});
+
   
   const upload = multer({ storage: storage });
   
