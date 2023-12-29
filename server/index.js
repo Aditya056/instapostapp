@@ -11,7 +11,7 @@ const { get } = require('request-promise');
 const uploadImages = require("./ImageUpload");
 
 const corsOptions ={
-    origin:'http://localhost:3000'
+    origin:'https://aditya056.github.io/instapostapp/'
 }
 app.use(cors(corsOptions));
 app.use(express.json());
