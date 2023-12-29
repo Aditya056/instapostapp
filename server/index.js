@@ -10,7 +10,7 @@ const { IgApiClient } = require('instagram-private-api');
 const { get } = require('request-promise');
 const uploadImages = require("./ImageUpload");
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: 'https://aditya056.github.io/instapostapp/',
 };
   
   
@@ -111,6 +111,3 @@ app.post('/posttoinsta',upload.single('image'),async(req,res)=>{
 })
 
 
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`)
-  })
