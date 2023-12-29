@@ -19,7 +19,7 @@ app.use(express.json());
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, ''); // Adjust the path accordingly
+      cb(null, 'images/'); // Adjust the path accordingly
     },
     filename: function (req, file, cb) {
       const originalnameSplit = file.originalname.split('.');
