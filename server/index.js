@@ -9,12 +9,12 @@ const multer = require('multer')
 const { IgApiClient } = require('instagram-private-api');
 const { get } = require('request-promise');
 const uploadImages = require("./ImageUpload");
-const corsOptions = {
-    origin: ['https://aditya056.github.io/instapostapp','https://aditya056.github.io'],
-};
+
   
   
-app.use(cors(corsOptions));
+app.use(cors({
+    origin: 'https://aditya056.github.io',
+}));
 
 app.use(express.json());
 
