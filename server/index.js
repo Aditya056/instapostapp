@@ -11,9 +11,7 @@ const { get } = require('request-promise');
 const uploadImages = require("./ImageUpload");
 
 const corsOptions ={
-    origin:'http://localhost:3000', 
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
+    origin:'http://localhost:3000'
 }
 app.use(cors(corsOptions));
 app.use(express.json());
