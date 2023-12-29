@@ -17,9 +17,12 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 
+const path = require('path');
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, process.env.UPLOAD_DIR || 'uploads/'); // Use environment variable or default path
+        const uploadDir = process.env.UPLOAD_DIR || 'uploads/';
+        cb(null, path.join(__dirname, uploadDir));
     },
     filename: function (req, file, cb) {
         const originalnameSplit = file.originalname.split('.');
@@ -27,6 +30,7 @@ const storage = multer.diskStorage({
         cb(null, 'image1.' + fileExtension);
     },
 });
+
 
   
   const upload = multer({ storage: storage });
