@@ -8,7 +8,7 @@ const cors = require('cors')
 const { IgApiClient } = require('instagram-private-api');
 const { get } = require('request-promise');
 const corsOptions = {
-    origin: 'https://Aditya056.github.io',
+    origin: 'https://aditya056.github.io',
 };
   
   
