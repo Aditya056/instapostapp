@@ -4,36 +4,18 @@ const express = require('express')
 const app = express()
 const port = 3030;
 const cors = require('cors')
-const multer = require('multer')
 
 const { IgApiClient } = require('instagram-private-api');
 const { get } = require('request-promise');
-const uploadImages = require("./ImageUpload");
-
-const corsOptions ={
-    origin:['https://aditya056.github.io','http://localhost:3000']
-}
+const corsOptions = {
+    origin: 'http://localhost:3000',
+};
+  
+  
 app.use(cors(corsOptions));
 app.use(express.json());
 
 
-const path = require('path');
-
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        const uploadDir = process.env.UPLOAD_DIR || 'uploads/';
-        cb(null, path.join(__dirname, uploadDir));
-    },
-    filename: function (req, file, cb) {
-        const originalnameSplit = file.originalname.split('.');
-        const fileExtension = originalnameSplit[originalnameSplit.length - 1];
-        cb(null, 'image1.' + fileExtension);
-    },
-});
-
-
-  
-  const upload = multer({ storage: storage });
   
 
 
@@ -42,6 +24,7 @@ const validate = async(username,pass)=>{
     const ig = new IgApiClient();
     ig.state.generateDevice(username);
     console.log('validating...')
+    console.log(username,pass)
     try{
         await ig.account.login(username,pass);
         t=ig;
@@ -99,21 +82,20 @@ app.post('/validate',async(req,res)=>{
 
 
 
-app.post('/posttoinsta',upload.single('image'),async(req,res)=>{
-    if (!req.file) {
-        return res.status(400).send('No file uploaded.');
-      }
-      const file = req.file;
+app.post('/posttoinsta',async(req,res)=>{
+      const file = req.body.image;
       const textdata = req.body.textData;
       const token = JSON.parse(req.body.token);
       console.log('got it!')
-
-      const uri = await uploadImages(file.path)
+      console.log(file)
+    
+      const ig =await validate(token.token, token.pass)
       
-      await posttoinsta(await validate(token.token, token.pass), textdata, uri);     
+      await posttoinsta(ig, textdata, file);     
       res.send() 
 })
 
 
-
-app.listen(3030)
+app.listen(port, () => {
+    console.log(`Listening on port ${port}`)
+  })

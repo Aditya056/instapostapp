@@ -16,6 +16,7 @@ function Login(props){
         const username = document.getElementById('username').value;
         const password = document.getElementById('pass').value;
         setLoading(true)
+
         axios.post('http://localhost:3030/validate',{Name:username,Pass:password})
         .then((response)=>{
             setLoading(false)
