@@ -108,6 +108,13 @@ function Post(props){
     } 
 
 
+    useEffect(()=>{
+      if(usertoken===null){
+        setImage('')
+        setposted('')
+      }
+    },[usertoken])
+
  
     return(
         <div className="postcontainer">
