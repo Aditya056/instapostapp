@@ -49,7 +49,6 @@ function Post(props){
 
 
       const handlePost1 = async (file) => {
-        console.log('here uploading image')
           try {
             const formData = new FormData();
             formData.append('file', file);
@@ -94,7 +93,6 @@ function Post(props){
         const formData= {'image':imageurl,
                     'textData': Title,
                     'token': JSON.stringify(usertoken)}
-                    console.log(formData)
         await axios.post('https://instapostapp.vercel.app/posttoinsta', formData)
         .then((res)=>{
             setloading(false)
