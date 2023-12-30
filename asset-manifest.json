@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/instapostapp/static/css/main.cd81f285.css",
-    "main.js": "/instapostapp/static/js/main.0939ab6c.js",
+    "main.js": "/instapostapp/static/js/main.ab0c2a0f.js",
     "static/js/787.a65855cb.chunk.js": "/instapostapp/static/js/787.a65855cb.chunk.js",
     "static/media/red-heart-speech-bubble-png.webp": "/instapostapp/static/media/red-heart-speech-bubble-png.15b0cab3010d46089b0a.webp",
     "index.html": "/instapostapp/index.html",
     "main.cd81f285.css.map": "/instapostapp/static/css/main.cd81f285.css.map",
-    "main.0939ab6c.js.map": "/instapostapp/static/js/main.0939ab6c.js.map",
+    "main.ab0c2a0f.js.map": "/instapostapp/static/js/main.ab0c2a0f.js.map",
     "787.a65855cb.chunk.js.map": "/instapostapp/static/js/787.a65855cb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd81f285.css",
-    "static/js/main.0939ab6c.js"
+    "static/js/main.ab0c2a0f.js"
   ]
 }
