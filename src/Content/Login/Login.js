@@ -17,7 +17,7 @@ function Login(props){
         const password = document.getElementById('pass').value;
         setLoading(true)
 
-        axios.post('http://localhost:3030/validate',{Name:username,Pass:password})
+        axios.post('https://instapostapp.vercel.app/validate',{Name:username,Pass:password})
         .then((response)=>{
             setLoading(false)
             if(response.data.valid)
