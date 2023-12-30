@@ -51,7 +51,7 @@ function Login(props){
                     <h1 className='heading'>Instagram Post App</h1>
                     <form className='form'>
                     <div className='fields'>
-                        <label>Phone number, username, or email</label>
+                        <label>username</label>
                         <input type='text' required id='username' onChange={()=>seterror(false)}/>
                     </div>
                     <div className='fields'>
