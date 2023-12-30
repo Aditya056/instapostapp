@@ -7,11 +7,10 @@ const cors = require('cors')
 
 const { IgApiClient } = require('instagram-private-api');
 const { get } = require('request-promise');
-const corsOptions = {
-    origin: 'https://aditya056.github.io',
-};
-  
-  
+
+const corsOptions ={
+    origin:['https://aditya056.github.io','http://localhost:3000']
+}
 app.use(cors(corsOptions));
 app.use(express.json());
 
