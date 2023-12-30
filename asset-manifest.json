@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/instapostapp/static/css/main.cd81f285.css",
-    "main.js": "/instapostapp/static/js/main.0bb1f8bb.js",
-    "static/js/787.a65855cb.chunk.js": "/instapostapp/static/js/787.a65855cb.chunk.js",
-    "static/media/red-heart-speech-bubble-png.webp": "/instapostapp/static/media/red-heart-speech-bubble-png.15b0cab3010d46089b0a.webp",
-    "index.html": "/instapostapp/index.html",
-    "main.cd81f285.css.map": "/instapostapp/static/css/main.cd81f285.css.map",
-    "main.0bb1f8bb.js.map": "/instapostapp/static/js/main.0bb1f8bb.js.map",
-    "787.a65855cb.chunk.js.map": "/instapostapp/static/js/787.a65855cb.chunk.js.map"
+    "main.css": "/static/css/main.cd81f285.css",
+    "main.js": "/static/js/main.b886d13e.js",
+    "static/js/787.a65855cb.chunk.js": "/static/js/787.a65855cb.chunk.js",
+    "static/media/red-heart-speech-bubble-png.webp": "/static/media/red-heart-speech-bubble-png.15b0cab3010d46089b0a.webp",
+    "index.html": "/index.html",
+    "main.cd81f285.css.map": "/static/css/main.cd81f285.css.map",
+    "main.b886d13e.js.map": "/static/js/main.b886d13e.js.map",
+    "787.a65855cb.chunk.js.map": "/static/js/787.a65855cb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd81f285.css",
-    "static/js/main.0bb1f8bb.js"
+    "static/js/main.b886d13e.js"
   ]
 }
